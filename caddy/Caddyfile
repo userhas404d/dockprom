@@ -9,6 +9,13 @@
     reverse_proxy cadvisor:8080
 }
 
+:8086 {
+    basicauth /* {
+        {$ADMIN_USER} {$ADMIN_PASSWORD_HASH}
+    }
+    reverse_proxy influxdb:8086
+}
+
 :9090 {
     basicauth /* {
         {$ADMIN_USER} {$ADMIN_PASSWORD_HASH}

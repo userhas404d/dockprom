@@ -9,3 +9,12 @@ datasources:
     basicAuth: false
     isDefault: true
     editable: true
+
+  - name: InfluxDB
+    type: influxdb
+    access: proxy
+    orgId: 1
+    url: http://influxdb:8086
+    database: influx
+    basicAuth: false
+    editable: true
